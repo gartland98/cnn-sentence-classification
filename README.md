@@ -25,4 +25,4 @@ Data Format Summary
 Label Decision 
 
 We assumed snippets (from Rotten Tomatoes webpages) for reviews marked with 
-``fresh'' are positive, and those for reviews marked with ``rotten'' are negative.
+``fresh'' are positive, and those for reviews marked with "rotten" are negative
