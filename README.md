@@ -1,4 +1,4 @@
-# cnn-sentencec-classification
+# cnn-sentence-classification
 
 Data Format Summary 
 
