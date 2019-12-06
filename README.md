@@ -26,3 +26,8 @@ Label Decision
 
 We assumed snippets (from Rotten Tomatoes webpages) for reviews marked with 
 ``fresh'' are positive, and those for reviews marked with "rotten" are negative
+
+algorithm summary
+
+cnn_random_classification: use random initialized weight when training algorithm
+cnn_classification_word2vec: use trained word2vec as a weight when trainig algorithm
