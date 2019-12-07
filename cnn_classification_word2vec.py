@@ -226,7 +226,7 @@ for epoch in range(30):
             count+=1
 
             if len(centerinds) == 3:
-                data = Variable(embeds(centerinds).t().unsqueeze(0))
+                data = Variable(embeds[centerinds].t().unsqueeze(0))
                 optimizer1.zero_grad()
                 #model_tri.train()
                 output = model_tri(data)
@@ -239,7 +239,7 @@ for epoch in range(30):
                 optimizer1.step()
 
             if len(centerinds) == 4:
-                data = Variable(embeds(centerinds).t().unsqueeze(0))
+                data = Variable(embeds[centerinds].t().unsqueeze(0))
                 optimizer2.zero_grad()
                 #model_quad.train()
                 output = model_quad(data)
@@ -252,7 +252,7 @@ for epoch in range(30):
                 optimizer2.step()  # update gradients
 
             if len(centerinds) >= 5:
-                data = Variable(embeds(centerinds).t().unsqueeze(0))
+                data = Variable(embeds[centerinds].t().unsqueeze(0))
                 optimizer3.zero_grad()
                 #model_five.train()
                 output = model_five(data)
@@ -280,7 +280,7 @@ with torch.no_grad():
         target = words[-1]
 
         if len(centerinds) == 3:
-            data = Variable(embeds(centerinds).t().unsqueeze(0))
+            data = Variable(embeds[centerinds].t().unsqueeze(0))
             #model_tri.eval()
             output = model_tri(data)
             prediction.append(output[0].argmax())
@@ -288,14 +288,14 @@ with torch.no_grad():
 
 
         if len(centerinds) == 4:
-            data = Variable(embeds(centerinds).t().unsqueeze(0))
+            data = Variable(embeds[centerinds].t().unsqueeze(0))
             #model_quad.eval()
             output = model_quad(data)
             prediction.append(output[0].argmax())
             answerind.append(target)
 
         if len(centerinds) >= 5:
-            data = Variable(embeds(centerinds).t().unsqueeze(0))
+            data = Variable(embeds[centerinds].t().unsqueeze(0))
             #model_five.eval()
             output = model_five(data)
             prediction.append(output[0].argmax())
