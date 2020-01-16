@@ -45,7 +45,7 @@ for i in pos_data:
             pos_sen.append(j)
     pos_sen.append(1)
     pos_sens.append(pos_sen)
-print(pos_sens[-1])
+
 
 train_sens=neg_sens[:int(len(neg_sens)*0.9)]+pos_sens[:int(len(pos_sens)*0.9)]
 test_sens=neg_sens[int(len(neg_sens)*0.9):]+pos_sens[int(len(pos_sens)*0.9):]
