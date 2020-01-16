@@ -156,7 +156,7 @@ for epoch in range(25):
     total_batch=int(len(train_sens)/batch_size)
     for i in range(total_batch):
         random_sentences=random.sample(train_sens,batch_size)
-        ############ another way to do divide by batch #############
+        ############ another way to divide by batch #############
         #random_number=random.randrange(0,len(train_sens)-51)
         #random_number=0
         #shuffle(train_sens)
