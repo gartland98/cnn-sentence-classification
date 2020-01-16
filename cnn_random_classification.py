@@ -178,8 +178,8 @@ for epoch in range(25):
                 loss = -torch.log(output[0][target])
                 #predictions.append(output[0].argmax())
                 #answerinds.append(target)
-                loss.backward()  # calc gradients
                 train_loss.append(loss)
+                loss.backward()  # calc gradients
                 optimizer1.step()
 
             if len(centerinds) == 4:
@@ -191,8 +191,8 @@ for epoch in range(25):
                 loss = -torch.log(output[0][target])
                 #predictions.append(output[0].argmax())
                 #answerinds.append(target)
-                loss.backward()  # calc gradients
                 train_loss.append(loss)
+                loss.backward()  # calc gradients
                 optimizer2.step()  # update gradients
 
             if len(centerinds) >= 5:
@@ -204,8 +204,8 @@ for epoch in range(25):
                 loss = -torch.log(output[0][target])
                 #predictions.append(output[0].argmax())
                 #answerinds.append(target)
-                loss.backward()  # calc gradients
                 train_loss.append(loss)
+                loss.backward()  # calc gradients
                 optimizer3.step()  # update gradients
 
         if count % 1000 == 0:
